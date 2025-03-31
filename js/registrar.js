@@ -1,26 +1,22 @@
-document.getElementById('registroForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
-
-    // Obtener los valores de los campos
-    const nombre = document.getElementById('nombre').value;
+document.getElementById('userForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    // Validación básica
-    if (nombre === '' || email === '' || password === '') {
-        alert('Por favor, completa todos los campos.');
-        return;
-    }
-
-    // Aquí puedes agregar más validaciones si es necesario
-
-    // Simulación de envío de datos
-    console.log('Nombre:', nombre);
-    console.log('Correo Electrónico:', email);
+    document.getElementById('userName').textContent = `Nombre: ${name}`;
+    document.getElementById('userEmail').textContent = `Correo Electrónico: ${email}`;
     console.log('Contraseña:', password);
+    document.getElementById('result').style.display = 'block';
 
-    // Mostrar un mensaje de éxito
-    alert('Registro exitoso');
+    const welcomeMessage = `
+    <p>Gracias por registrarte con nosotros, bienvenido a pokimon un lugar pensado</p> 
+    <p>para que te salgas de lo cotidiano y tengas la oportunidad de 
+    tener tus propios pokimons y tus propias batallas.</p>
+    
 
     
+`
+// Insertar el mensaje en el div con id "welcomeMessage"
+document.getElementById('welcomeMessage').innerHTML = welcomeMessage;
 });

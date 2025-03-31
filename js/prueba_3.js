@@ -10,9 +10,13 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     document.getElementById('result').style.display = 'block';
 
     const welcomeMessage = `
-    <h1>¡Bienvenido, ${userName}!</h1>
-    <p>Gracias por registrarte con nosotros, bienvenido a pokimon un lugar pensado para que te salgas de lo cotidiano y tengas la oportunidad de 
-    tener tus propios pokimons y tus propias batallas <strong>${userEmail}</strong>.</p>
-    <p>Fecha de registro:${result} </p>
+    <p>Gracias por registrarte con nosotros, bienvenido a pokimon un lugar pensado</p> 
+    <p>para que te salgas de lo cotidiano y tengas la oportunidad de 
+    tener tus propios pokimons y tus propias batallas.</p>
+    
+
+    
 `
+// Insertar el mensaje en el div con id "welcomeMessage"
+document.getElementById('welcomeMessage').innerHTML = welcomeMessage;
 });
