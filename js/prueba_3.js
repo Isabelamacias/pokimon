@@ -4,10 +4,10 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-   // document.getElementById('userName').textContent = `Nombre: ${name}`;
-   // document.getElementById('userEmail').textContent = `Correo Electrónico: ${email}`;
-   // console.log('Contraseña:', password);
-   // document.getElementById('result').style.display = 'block';
+    document.getElementById('userName').textContent = `Nombre: ${name}`;
+    document.getElementById('userEmail').textContent = `Correo Electrónico: ${email}`;
+    console.log('Contraseña:', password);
+    document.getElementById('result').style.display = 'block';
 
     const welcomeMessage = `
     <h1>¡Bienvenido, ${userName}!</h1>
