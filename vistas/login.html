@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>POKIMON</title>
-        <script src="../js/index.js"></script>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login POKIMON</title>
+    <script src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/fondo.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="pokeball-top"></div>
         
-    </head>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <body>
-        <center>
-            <h1>BIENVENIDO AL MUNDO POKIMON</h1>
-            <i class="fa-solid fa-dragon"></i>
-            <p id="texto">Bienvenido a mi primer juego en javascript</p>
-        </center>
-        <hr><br><br><br>
-        <center>
-            <label for="">Username</label>
-            <input type="text"  name="" placeholder id="username"><br>
-            <label for="">Password</label>
-            <input = "password" name="" id="clave"><br>
-            <button onclick="Loguear()">Inciar sesion</button><br>
-            <a href="..//vistas/prueba_3.html"><button>Registrarse</button></a><br>
-        </center>
-    </body>
+        <h1>BIENVENIDO ENTRENADOR</h1>
+        <p class="subtitle">¡Prepárate para tu aventura Pokimon!</p>
+        
+        <div class="login-box">
+            <div class="input-field">
+                <img src="../img/pokeball-ico.webp" alt="Pokeball" class="input-icon">
+                <input type="email" id="correo" placeholder="Correo Electrónico" required>
+            </div>
+            
+            <div class="input-field">
+                <img src="../img/pokeball-ico.webp" alt="Contraseña" class="input-icon">
+                <input type="password" id="contraseña" placeholder="Contraseña" required>
+            </div>
+            
+            <button onclick="Loguear()" class="login-button">
+                <span>Iniciar Sesión</span>
+                <img src="../img/pikachu-icon.webp" alt="Pikachu" class="button-icon">
+            </button>
+            
+            <a href="Registro.html" class="register-link">¿No tienes cuenta? <span>Regístrate aquí</span></a>
+        </div>
+        
+        <div class="pokeball-bottom"></div>
+    </div>
+</body>
 </html>

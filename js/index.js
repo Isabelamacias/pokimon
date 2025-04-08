@@ -1,14 +1,18 @@
-
 function Loguear() {
-    let username = document.getElementById('username').value
-    let password = document.getElementById('clave').value
+    const correo = document.getElementById('correo').value;
+    const contraseña = document.getElementById('contraseña').value;
+    const registroCorreo = localStorage.getItem('registroCorreo');
+    const registroContra = localStorage.getItem('registroContra');
 
-    if(username == 'Rodolfo' && password == '123456'){
-        alert('Usuario valido')
-    }else{
-        alert('usuario incorrecto')
-    }  
+    if (!correo || !contraseña) {
+        alert('Complete ambos campos');
+        return;
+    }
 
+    if (correo === registroCorreo && contraseña === registroContra) {
+        alert('Inicio de sesión exitoso');
+        window.location.href = '../vistas/pokimons.html';
+    } else {
+        alert('Credenciales incorrectas');
+    }
 }
-
-
